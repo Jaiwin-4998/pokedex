@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pokedex-Lab2</title>
+    <base href="https://jaiwin-4998.github.io/Pokedexlab4/">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&display=swap" rel="stylesheet"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icon.png"/>
+    <link rel="icon" type="image/jpeg" href="assets/images/JT.jpeg" sizes="32x32"/>
+
+    <link rel="icon" type="image/jpeg" href="assets/images/JT.jpeg" sizes="16x16"/>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"/>
+    <link rel="stylesheet" type="text/css" href="src/app.css" />
+  </head>
+
+  <body>
+  <ons-navigator swipeable id="pageNav" page="index.html"></ons-navigator>
+
+    <template id="index.html">
+      <ons-page id="mainpage">
+        <div class="left"></div>
+          <ons-toolbar>
+            <div class="center" style="text-align:center;">Pokemon</div>
+          </ons-toolbar>
+          <ons-list-header>Pokemon (List of 100)</ons-list-header>
+          <div class="right"></div>
+          <ons-list>
+          <ons-lazy-repeat id="detaillist" modifier="chevron" tappable style="text-transform: capitalize;"></ons-lazy-repeat>
+          </ons-list>
+      </ons-page>
+    </template>
+
+    <template id="nextpage">
+      <ons-page id="nextpage">
+        <ons-toolbar> 
+          <div class="left">
+            <ons-back-button></ons-back-button> 
+          </div>
+          <div class="center" style="text-transform: uppercase;" id="title"></div>
+        </ons-toolbar>
+
+        <ons-card>
+          <div class="center" style="text-align: center;"> 
+             <img class="center" alt="Onsen UI" id="pokemonImages" />
+          </div>
+          <br>
+
+          <p class="center" id="pokename" style="text-transform: uppercase; text-align: center;"></p>
+
+          <ons-list-header>Types</ons-list-header>
+          <p id="type1" style="text-transform: capitalize; margin: 0;"></p>
+          <p id="type2" style="text-transform: capitalize; margin: 0;"></p>
+          <p id="type3" style="text-transform: capitalize; margin: 0;"></p>
+          <p id="type4" style="text-transform: capitalize; margin: 0;"></p>
+
+          <ons-list-header>Stats</ons-list-header> 
+
+          <div style="padding: 15px 0;">
+          <p style="margin: 0;">HP: &nbsp;<span id="effort1" style="background-color: crimson; border-radius: 10%; padding: 5px;"></span>&nbsp;<span id="baseStat1" style="background-color:darkcyan ; border-radius: 10%; padding: 5px;"></span></p>
+          </div>
+
+          <hr style="border-top: 1px dashed black; margin: 0;">
+
+          <div style="padding: 15px 0;">
+          <p style="margin: 0;">Attack: &nbsp;<span id="effort2" style="background-color: crimson; border-radius: 10%; padding: 5px;"></span>&nbsp;<span id="baseStat2" style="background-color:darkcyan ; border-radius: 10%; padding: 5px;"></span></p>
+          </div>
+
+          <hr style="border-top: 1px dashed black; margin: 0;">
+
+          <div style="padding: 15px 0;">
+          <p style="margin: 0;">Defence: &nbsp;<span id="effort3" style="background-color: crimson; border-radius: 10%; padding: 5px;"></span>&nbsp;<span id="baseStat3" style="background-color:darkcyan ; border-radius: 10%; padding: 5px;"></span></p>
+          </div>
+
+          <hr style="border-top: 1px dashed black; margin: 0;">
+
+          <div style="padding: 15px 0;">
+          <p style="margin: 0;">Special Attack: &nbsp;<span id="effort4" style="background-color: crimson; border-radius: 10%; padding: 5px;"></span>&nbsp;<span id="baseStat4" style="background-color:darkcyan ; border-radius: 10%; padding: 5px;"></span></p>
+          </div>
+
+          <hr style="border-top: 1px dashed black; margin: 0;">
+
+          <div style="padding: 15px 0;">
+          <p style="margin: 0;">Special Defence: &nbsp;<span id="effort5" style="background-color: crimson; border-radius: 10%; padding: 5px;"></span>&nbsp;<span id="baseStat5" style="background-color:darkcyan ; border-radius: 10%; padding: 5px;"></span></p>
+          </div>
+
+          <hr style="border-top: 1px dashed black; margin: 0;">
+
+          <div style="padding: 15px 0;">
+          <p style="margin: 0;">Speed: &nbsp;<span id="effort6" style="background-color: crimson; border-radius: 10%; padding: 5px;"></span>&nbsp;<span id="baseStat6" style="background-color:darkcyan ; border-radius: 10%; padding: 5px;"></span></p>
+          </div>
+
+        </ons-card>
+        </ons-page>
+      </template>
+  </body>
+
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+  <script src="src/app.js"></script>
+
+  <script type="text/javascript">
+    const registerSW = async () => {
+      if ("serviceWorker" in navigator) {
+        try {
+          await navigator.serviceWorker.register(
+            `${window.location.href}service-worker.js`
+          );
+          console.log("Service Worker Registered");
+        } catch (e) {
+          console.error("Error registering Service Worker...", e);
+        }
+      }
+    };
+    registerSW();
+  </script>
+</html>

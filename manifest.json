@@ -1,0 +1,43 @@
+{
+  "name": "Pokedex-Lab2",
+  "short_name": "Pokedex-Lab2",
+  "scope": "https://jaiwin-4998.github.io/Pokedexlab4/",
+  "start_url": "https://jaiwin-4998.github.io/Pokedexlab4/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "theme_color": "#000",
+  "icons": [
+    {
+      "src": "assets/images/JT.jpeg",
+      "type": "image/jpeg",
+      "sizes": "48x48"
+    },
+    {
+      "src": "assets/images/JT.jpeg",
+      "type": "image/jpeg",
+      "sizes": "96x96"
+    },
+    {
+      "src":"assets/images/JT.jpeg",
+      "sizes": "144x144",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "assets/images/JT.jpeg",
+      "type": "image/jpeg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/images/JT.jpeg",
+      "type": "image/jpeg",
+      "sizes": "512x512"
+    },
+    {
+      "src": "assets/images/JT.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

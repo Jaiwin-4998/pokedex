@@ -1,1 +1,2 @@
-# pokedexlab4
+# pwa-boilerplate
+Basic vanilla PWA boilerplate repository
