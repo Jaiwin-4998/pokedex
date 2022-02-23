@@ -1,8 +1,8 @@
 {
   "name": "Pokedex-Lab2",
   "short_name": "Pokedex-Lab2",
-  "scope": "https://jaiwin-4998.github.io/Pokedexlab4/",
-  "start_url": "https://jaiwin-4998.github.io/Pokedexlab4/",
+  "scope": "https://jaiwin-4998.github.io/pokedexlab4/",
+  "start_url": "https://jaiwin-4998.github.io/pokedexlab4/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
